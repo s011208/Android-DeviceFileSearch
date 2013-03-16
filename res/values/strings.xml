@@ -1,0 +1,8 @@
+<resources>
+
+    <string name="app_name">DeviceFileSearch</string>
+    <string name="search_label">DeviceFileSearch</string>
+    <string name="settings_description">Search files in yout device</string>
+    <string name="search_hint">Search files in yout device</string>
+
+</resources>
