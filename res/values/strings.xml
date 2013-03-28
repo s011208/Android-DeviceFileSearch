@@ -1,8 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">DeviceFileSearch</string>
-    <string name="search_label">DeviceFileSearch</string>
-    <string name="settings_description">Search files in yout device</string>
-    <string name="search_hint">Search files in yout device</string>
+    
+    <string name="search_label">Files</string>
+    <string name="settings_description">Files in your storage</string>
+    <string name="app_name">Files</string>
 
 </resources>

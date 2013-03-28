@@ -1,13 +1,12 @@
 <searchable xmlns:android="http://schemas.android.com/apk/res/android"
-        android:label="@string/search_label"
-        android:hint="@string/search_hint"
-        android:searchSettingsDescription="@string/settings_description"
-        android:searchSuggestAuthority="com.yenhsun.DeviceFileSearch.FilesProvider"
-        android:searchSuggestIntentAction="android.intent.action.VIEW"
-        android:searchSuggestIntentData="content://com.yenhsun.DeviceFileSearch.FilesProvider/data"
-        android:searchSuggestSelection=" ?"
-        android:searchSuggestThreshold="1"
-        android:includeInGlobalSearch="true"
-        >
+    android:hint="@string/settings_description"
+    android:includeInGlobalSearch="true"
+    android:label="@string/search_label"
+    android:queryAfterZeroResults="true"
+    android:searchSettingsDescription="@string/settings_description"
+    android:searchSuggestAuthority="com.yenhsun.DeviceFileSearch.FileSearcherProvider"
+    android:searchSuggestIntentAction="android.intent.action.VIEW"
+    android:searchSuggestSelection=" ?"
+    android:searchSuggestThreshold="1" >
 
 </searchable>

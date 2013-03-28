@@ -9,28 +9,18 @@
 
     <application
         android:allowBackup="false"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/file_searcher_appicon"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" 
-        >
+        android:theme="@style/AppTheme" >
         <activity
-            android:name=".ProxyActivity"
+            android:name="com.yenhsun.DeviceFileSearch.FileSearcherActivity"
+            android:excludeFromRecents="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Transparent" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            
-            <intent-filter>
-				<action android:name= "android.intent.action.VIEW"/>
-				<category android:name="android.intent.category.DEFAULT" />
-			</intent-filter>
-			
-            <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
-                 <category android:name="android.intent.category.DEFAULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
             <meta-data
@@ -39,11 +29,14 @@
         </activity>
 
         <provider
-            android:name="FilesProvider"
-            android:authorities="com.yenhsun.DeviceFileSearch.FilesProvider"
-            android:exported="true"
-             />
-        
+            android:name="com.yenhsun.DeviceFileSearch.FileSearcherProvider"
+            android:authorities="com.yenhsun.DeviceFileSearch.FileSearcherProvider"
+            android:exported="true" >
+        </provider>
     </application>
+
+    <meta-data
+        android:name="android.app.default_searchable"
+        android:value=".FileSearcherActivity" />
 
 </manifest>
