@@ -23,8 +23,7 @@ public final class R {
         public static final int asus_ep_icon_photo_cover=0x7f020006;
         public static final int asus_ep_icon_video_cover=0x7f020007;
         public static final int asus_ep_icon_zip_cover=0x7f020008;
-        public static final int file_searcher_appicon=0x7f020009;
-        public static final int ic_launcher=0x7f02000a;
+        public static final int ic_launcher=0x7f020009;
     }
     public static final class layout {
         public static final int main=0x7f030000;
