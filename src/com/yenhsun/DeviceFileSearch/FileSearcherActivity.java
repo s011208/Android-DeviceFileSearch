@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -110,9 +111,21 @@ public class FileSearcherActivity extends Activity {
         } catch (Exception e) {
             if (DEBUG)
                 Log.d(Tag, "Exception :" + e.toString());
-            Toast.makeText(getBaseContext(), "Cannot handle this directory", Toast.LENGTH_SHORT)
-                    .show();
+            try {
+                openFolder(intent.getDataString());
+            } catch (Exception e1) {
+                Toast.makeText(getBaseContext(), "Cannot handle this directory", Toast.LENGTH_SHORT)
+                        .show();
+            }
+
         }
+    }
+
+    public void openFolder(String path) {
+        Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+        Uri uri = Uri.parse(path);
+        intent.setDataAndType(uri, "text/csv");
+        startActivity(Intent.createChooser(intent, "Open folder"));
     }
 
     public String getExtension(String path) {
